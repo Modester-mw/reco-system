@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+            <head>
+                <title>University Recommendation Application</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+                <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+                <link href="/server/UnderGraduateServer.py">
+                <link  href="/server/server.py">
+            </head>
+            <body>
+                <div class="container">
+                    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                        <h3 class="navbar-brand">Undergraduate Recommendations</h3>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample05">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="undergraduate.html">Undergraduate College<span class="sr-only">(current)</span></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="container">
+                    <div class="jumbotron">
+                        <h1>University Recommendation system</h1>
+                        <p class="lead"></p>
+                        
+                          <p>The top Universities based on ranks and tuition fee </p>
+                           <table border=1> 
+                            {{% for key, value in result.items() %}}
+                            <tr><td><h4>No.</h4></td><td><h4>University</h4></td><td><h4> Rate</h4></td></tr>
+                            <tr><td><p>1. </p></td><td>{{result10}}</td><td>{result11}</td></tr>
+                            <tr><td><p>2. </p></td><td>{result20}</td><td>{result21}</td></tr>
+                            <tr><td><p>3. </p></td><td>{result30}</td><td>{result31}</td></tr>
+                            <tr><td><p>4. </p></td><td>{result40}</td><td>{result41}</td></tr>
+                             <tr><td><p>5. </p></td><td>{result50}</td><td>{result51}</td></tr> 
+                             {% endfor %}
+                            </table>
+                    </div>
+     
+
+                    <footer class="footer">
+                    </footer>
+                </div>
+            </body>
+        </html>
